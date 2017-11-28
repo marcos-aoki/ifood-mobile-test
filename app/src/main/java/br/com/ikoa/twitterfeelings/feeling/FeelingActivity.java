@@ -118,6 +118,7 @@ public class FeelingActivity extends AppCompatActivity implements FeelingView {
             loading.setVisibility(View.GONE);
             errorView.setVisibility(View.GONE);
             image.setImageResource(R.drawable.ic_happy);
+            image.animate().rotation(360).setDuration(1000);
             container.setBackgroundColor(getResources().getColor(R.color.happy));
         }
 
@@ -128,6 +129,7 @@ public class FeelingActivity extends AppCompatActivity implements FeelingView {
             loading.setVisibility(View.GONE);
             errorView.setVisibility(View.GONE);
             image.setImageResource(R.drawable.ic_neutral);
+            image.animate().rotation(360).setDuration(1000);
             container.setBackgroundColor(getResources().getColor(R.color.neutral));
         }
 
@@ -138,6 +140,7 @@ public class FeelingActivity extends AppCompatActivity implements FeelingView {
             loading.setVisibility(View.GONE);
             errorView.setVisibility(View.GONE);
             image.setImageResource(R.drawable.ic_sad);
+            image.animate().rotation(360).setDuration(1000);
             container.setBackgroundColor(getResources().getColor(R.color.sad));
         }
     }

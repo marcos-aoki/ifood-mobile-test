@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Twitter Feelings</string>
+    <string name="list_error_message">Error on loading data</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_search_hint">Find user messages</string>
+
+    <string name="feeling_error_message">Error on analyze text</string>
+</resources>

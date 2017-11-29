@@ -10,13 +10,29 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
 
-    <TextView
-        android:id="@+id/feeling_activity_error_text"
+    <LinearLayout
+        android:id="@+id/feeling_activity_error_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/feeling_error_message"
-        android:visibility="gone" />
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/feeling_activity_error_image"
+            android:layout_width="@dimen/error_image_size"
+            android:layout_height="@dimen/error_image_size"
+            android:src="@drawable/ic_feeling_error"/>
+
+        <TextView
+            android:id="@+id/feeling_activity_error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feeling_error_message"
+            android:textSize="@dimen/error_text_size"/>
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/feeling_activity_image"

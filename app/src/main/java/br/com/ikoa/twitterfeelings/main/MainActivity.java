@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         /**
          * Error view.
          */
-        private final TextView errorView;
+        private final View errorView;
 
         /**
          * Image view.
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         private UI() {
             loading = (ProgressBar) findViewById(R.id.main_activity_loading);
             recyclerView = (RecyclerView) findViewById(R.id.main_activity_list);
-            errorView = (TextView) findViewById(R.id.main_activity_error_text);
+            errorView = findViewById(R.id.main_activity_error_container);
             image = (ImageView) findViewById(R.id.main_activity_image);
 
             setupUI();
@@ -194,6 +194,13 @@ public class MainActivity extends AppCompatActivity implements MainView {
         private void clearSearchViewFocus() {
             searchView.clearFocus();
         }
+
+        /**
+         * Scroll the list for the first position.
+         */
+        private void scrollToTop() {
+            recyclerView.scrollToPosition(0);
+        }
     }
 
     /**
@@ -205,6 +212,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         public boolean onQueryTextSubmit(String query) {
             mainPresenter.onSearch(query);
             ui.clearSearchViewFocus();
+            ui.scrollToTop();
             return true;
         }
 

@@ -73,7 +73,7 @@ public class FeelingActivity extends AppCompatActivity implements FeelingView {
         /**
          * Error view.
          */
-        private final TextView errorView;
+        private final View errorView;
 
         /**
          * Image view.
@@ -90,7 +90,7 @@ public class FeelingActivity extends AppCompatActivity implements FeelingView {
          */
         private UI() {
             loading = (ProgressBar) findViewById(R.id.feeling_activity_loading);
-            errorView = (TextView) findViewById(R.id.feeling_activity_error_text);
+            errorView = findViewById(R.id.feeling_activity_error_container);
             image = (ImageView) findViewById(R.id.feeling_activity_image);
             container = findViewById(R.id.feeling_activity_container);
         }

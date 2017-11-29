@@ -16,4 +16,10 @@
         <item name="android:textColorHint">@android:color/white</item>
     </style>
 
+    <!-- Feeling activity theme. -->
+    <style name="FeelingTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
 </resources>
